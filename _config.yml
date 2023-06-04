@@ -19,9 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: VMLverse
+subtitle: "Insights, Experiments, and Discoveries in Machine Learning"
+
+title_separator: "|"
 email: vimalkumar.engr@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  "Welcome to VMLverse - Vimal's ML Universe! Join me as I embark on a continuous learning journey into the fascinating world of Machine Learning."
+  "Welcome to VMLverse - Join me as I embark on a continuous learning journey into the fascinating world of Machine Learning."
 baseurl: "/my-blog" # the subpath of your site, e.g. /blog
 url: "https://vmlverse.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: test_twitter
@@ -29,8 +32,16 @@ github_username:  VMLverse
 linkedin_username: vimal-venugopal-1311a519
 
 #new fields not defaulted by jekyll-new with the minima theme
-author: Vimal Venugopal
+name: Vimal Venugopal #assign a site author | Don’t worry, you can override the site author with different ones on specific posts, pages, or collection documents.
 copyright: "VMLverse"
+
+logo: "/assets/images/logo copy.jpeg"
+
+read_time: true # Enable estimated reading time snippets
+
+search: true #enable site-wide search
+lunr:
+  search_within_pages: true # default search uses Lunr to build a search index of all post and your documents in collections
 
 # Build settings
 # theme: minima
@@ -41,10 +52,89 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 paginate: 5 # amount of posts to show
 paginate_path: /my-blog/page:num/
 
+timezone: America/New_York
+
+#author details:
+author:
+  name     : "Vimal Venugopal"
+  avatar   : "/assets/images/DSC1717square.jpeg"
+  bio      : "a curious mind with a passion for machine learning, photography and travel "
+  location : "Toronto, Canada"
+  links:    
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/vimal-venugopal-1311a519/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/VMLverse"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/vimstargram/"
+    - label: "Wordpress"
+      icon: "fas fa-fw fa-link"
+      url: "https://cognitivescrawls.wordpress.com/"
+
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/vimal-venugopal-1311a519/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/VMLverse"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/vimstargram/"
+
 
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jemoji
+
+# Posts Defaults 
+defaults:
+  #_posts # prev. was commented out
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+
+# Page Defaults:
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+
+#Collection foo
+defaults:
+  # _foo
+  - scope:
+      path: ""
+      type: foo
+    values:
+      layout: single
 
 # Exclude from processing.
 # The following items will not be processed, by default.
