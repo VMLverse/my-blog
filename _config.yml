@@ -134,7 +134,7 @@ defaults:
 comments:
   provider: "disqus"
   disqus:
-    shortname: "disqus_VI23XNQjcO"
+    shortname: "vmlverse"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
