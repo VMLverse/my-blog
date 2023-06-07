@@ -46,7 +46,7 @@ lunr:
 # Build settings
 # theme: minima
 # theme: minimal-mistakes-jekyll
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+# remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 #adding pagination setting
 paginate: 5 # amount of posts to show
@@ -107,12 +107,44 @@ whitelist:
   - jekyll-include-cache
   - jemoji
 
-# Posts Defaults 
+#DEFINE NEW COLLECTION
+collections:
+  projects:
+    output: true
+
+# default YAML front matter
 defaults:
-  #_posts # prev. was commented out
+  # all
   - scope:
       path: ""
+    values:
+      layout: single
+      mathjax: true
+      author_profile: true
+      class: wide
+      title: " "
+      title_separator: "|"
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # posts
+  - scope:
       type: posts
+    values:
+      # toc: true
+      # toc_label: "Contents"
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # projects
+  - scope:
+      path: ""
+      type: projects
     values:
       layout: single
       author_profile: true
@@ -121,14 +153,10 @@ defaults:
       share: true
       related: true
 
-# Page Defaults:
-defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
+#########################
+
+
+  
 
 #configure comments:
 comments:
@@ -146,7 +174,6 @@ comments:
 ## Reading Files
 include:
   - _pages
-  - _recipes
   - code
 
 exclude:
@@ -162,36 +189,8 @@ exclude:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-#DEFINE NEW COLLECTION
-collections:
-  articles:
-    output: true
-    permalink: /:collection/:path/
-  projects:
-    output: true
-    permalink: /:collection/:path/
-  
+#TO ALLOW TAG SEARCH:
+tag_archive:
+  type: liquid
+  path: /tags/
 
-#LAYOUT DESIGN OF COLLECTION
-defaults:
-  # _foo
-  - scope:
-      path: ""
-      type: articles
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
