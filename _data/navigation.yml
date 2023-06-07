@@ -5,13 +5,15 @@ main:
    #  url: https://thedailygoose.com/books/data-science-reading-list/
   - title: "About"
     url: /about/  #_pages/about.md renders this page
-  - title: "Articles"
-    url: /articles/ #_pages/about.md renders this page
+  - title: "Blog"
+    url: /
+  # - title: "Articles"
+  #   url: /articles/ #_articles collection
   - title: "Projects"
-    url: /projects/ #_pages/about.md renders this page
-  # - title: "Posts"
-  #   url: /year-archive/
+    url: /projects/ #_c collection
   # - title: "Sample Collections"
   #   url: /collection-archive/
-  - title: "CV"
+  - title: "Resume"
     url: /docs/resume.pdf #hardcoded page /docs/cv.pdf
+  - title: "Archive"
+    url: /year-archive/
