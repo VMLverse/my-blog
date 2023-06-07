@@ -46,7 +46,7 @@ lunr:
 # Build settings
 # theme: minima
 # theme: minimal-mistakes-jekyll
-# remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 #adding pagination setting
 paginate: 5 # amount of posts to show
