@@ -6,7 +6,7 @@ main:
   - title: "About"
     url: /about/  #_pages/about.md renders this page
   - title: "Blog"
-    url: /
+    url: /blog/
   # - title: "Articles"
   #   url: /articles/ #_articles collection
   - title: "Projects"
@@ -15,5 +15,5 @@ main:
   #   url: /collection-archive/
   - title: "Resume"
     url: /docs/resume.pdf #hardcoded page /docs/cv.pdf
-  - title: "Archive"
-    url: /year-archive/
+  # - title: "Archive"
+  #   url: /year-archive/

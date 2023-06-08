@@ -3,6 +3,8 @@ layout: archive
 title: "About Me"
 permalink: /about/
 author_profile: true
+header:
+    overlay_image: /assets/images/joel-filipe-small-warmer.jpg
 ---
 
 Hello, I'm Vimal Venugopal and I'm Senior Principal Professional Services Consultant at Genesys. I know that's a lot of words, but in simple terms, our company sells their Enterprise Cloud Software for Call Ceneters and am responsible for leading the implementation and addressing all the customer requirements from inception to production go live. Although my profession as a consultant is exciting, my interest lie in Machine Learning and Programming in General. And that leads to the reason why I undertook the [OMSCS Program](https://omscs.gatech.edu/home) at Georgia Tech.
